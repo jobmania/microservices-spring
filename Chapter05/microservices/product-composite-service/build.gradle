@@ -36,4 +36,8 @@ dependencies {
 //	implementation('io.springfox:springfox-spring-webflux:3.0.0')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('io.projectreactor:reactor-test')
+
+	implementation ('org.mapstruct:mapstruct:1.5.5.Final')
+	annotationProcessor ('org.mapstruct:mapstruct-processor:1.5.5.Final')
+	testAnnotationProcessor('org.mapstruct:mapstruct-processor:1.5.5.Final')
 }

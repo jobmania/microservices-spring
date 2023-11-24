@@ -29,6 +29,15 @@ dependencies {
 	implementation project(':util')
 	implementation('org.springframework.boot:spring-boot-starter-actuator')
 	implementation('org.springframework.boot:spring-boot-starter-webflux')
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation('mysql:mysql-connector-java')
+	implementation ('org.mapstruct:mapstruct:1.5.5.Final')
+
+	compileOnly ('org.mapstruct:mapstruct-processor:1.5.5.Final')
+	annotationProcessor ('org.mapstruct:mapstruct-processor:1.5.5.Final')
+	testAnnotationProcessor('org.mapstruct:mapstruct-processor:1.5.5.Final')
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('io.projectreactor:reactor-test')
+	testImplementation('com.h2database:h2')
 }
