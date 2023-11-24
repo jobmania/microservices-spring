@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 
@@ -34,13 +35,13 @@ public class ProductCompositeServiceApplication {
 
 	/**
 	 * Will exposed on $HOST:$PORT/swagger-ui.html
-	 *
+	 * -> localhost:8080/swagger-ui/index.html 로 접근해보세요
 	 * @return
 	 */
 	@Bean
 	public Docket apiDocumentation() {
 
-		return new Docket(SWAGGER_2)
+		return new Docket(DocumentationType.OAS_30)
 			.select()
 			.apis(basePackage("se.magnus.microservices.composite.product"))
 			.paths(PathSelectors.any())
